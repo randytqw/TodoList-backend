@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test';
 const expect = require('chai').expect;
 const request = require('supertest');
 const {app} = require('../app');
-const axios = require('axios');
+
 
 
 it('test POST', (done) => {
@@ -18,4 +18,4 @@ it('test POST', (done) => {
       .catch((err) => done(err));
 });
 
-axios.delete('http://localhost:3000/deleteAll');
+

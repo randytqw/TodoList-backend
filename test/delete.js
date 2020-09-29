@@ -3,7 +3,6 @@ process.env.NODE_ENV = 'test';
 const expect = require('chai').expect;
 const request = require('supertest');
 const {app} = require('../app');
-const axios = require('axios');
 
 it('test DEL', (done) => {
     request(app).post('/task')
@@ -20,5 +19,3 @@ it('test DEL', (done) => {
     })
     .catch((err) => done(err));
 });
-
-axios.delete('http://localhost:3000/deleteAll');
