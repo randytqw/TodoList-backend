@@ -13,6 +13,7 @@ it('test DEL', (done) => {
       request(app).delete(url)
         .then((res) => {
           const body = res.body;
+          console.log(body);
           expect(body).to.contain.property('deletedCount');
           done();
         })

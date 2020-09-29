@@ -5,13 +5,13 @@ const request = require('supertest');
 const {app} = require('../app');
 
 it('test GET', (done) => {
-    
     request(app).delete('/deleteAll').then(res=>{request(app).post('/task')
     .send({ content: 'test' })
     .then((res) => {
       request(app).get('/tasks')
         .then((res) => {
           const body = res.body;
+          console.log(body);
           expect(body.length).to.equal(1);
           done();
         })
