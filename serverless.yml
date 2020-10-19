@@ -63,7 +63,7 @@ functions:
     events:
       - http: GET tasks
       - http: POST task
-      - http: DELETE delete
-      - http: PUT edit
+      - http: DELETE delete/{id}
+      - http: PUT edit/{id}
       - http: GET hello
       - http: DELETE deleteAll
